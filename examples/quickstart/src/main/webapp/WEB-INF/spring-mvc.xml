@@ -40,7 +40,7 @@
 		<property name="exceptionMappings">  
 			<props>  
 				<prop key="java.lang.Throwable">error/500</prop>
-            </props>  
+            </props>
 		</property>  
     </bean>
 </beans>

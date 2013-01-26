@@ -32,7 +32,8 @@ public class AccountService {
 	public static final int HASH_INTERATIONS = 1024;
 	private static final int SALT_SIZE = 8;
 
-	private static Logger logger = LoggerFactory.getLogger(AccountService.class);
+	private static Logger logger = LoggerFactory
+			.getLogger(AccountService.class);
 
 	private UserDao userDao;
 	private TaskDao taskDao;
@@ -100,7 +101,8 @@ public class AccountService {
 		byte[] salt = Digests.generateSalt(SALT_SIZE);
 		user.setSalt(Encodes.encodeHex(salt));
 
-		byte[] hashPassword = Digests.sha1(user.getPlainPassword().getBytes(), salt, HASH_INTERATIONS);
+		byte[] hashPassword = Digests.sha1(user.getPlainPassword().getBytes(),
+				salt, HASH_INTERATIONS);
 		user.setPassword(Encodes.encodeHex(hashPassword));
 	}
 
