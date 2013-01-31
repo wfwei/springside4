@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- sitemesh configuration file -->
 <decorators defaultdir="/WEB-INF/layouts/">
 	<excludes>
 		<pattern>/static/*</pattern>
